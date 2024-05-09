@@ -44,7 +44,7 @@ java -jar phone-words-1.0-SNAPSHOT.jar -dictionary={dictionary_file_path} -input
 2. Unzip the folder.
 3. Inside the unzipped folder, you'll find:
    - `input/input.txt`: Add phone numbers to this file.
-   - dictionary/dictionary.txt:  Add dictionary words to this file.
+   - `dictionary/dictionary.txt:`  Add dictionary words to this file.
    - `lib`: Contains the application JAR.
    - `start.bat`: Execute this file to run the application on Windows.
    - `start.sh`: Execute this file to run the application on Unix-based systems.
