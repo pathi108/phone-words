@@ -20,7 +20,7 @@ public class ConfigParserTest {
     @Test
     public void testNoDictionary(){
         assertThatThrownBy(() -> {
-            String [] args={"dictFilePath","input=InputFilePath"};
+            String [] args={"dictFilePath","-input=InputFilePath"};
             ConfigParser.parse(args); }
         ).isInstanceOf(ConfigParserException.class)
                 .hasMessageContaining("The file path to the dictionary not provided");
@@ -29,7 +29,7 @@ public class ConfigParserTest {
     @Test
     public void testConfigParser() throws ConfigParserException {
 
-            String [] args={"dictionary=dictFilePath","input=InputFilePath"};
+            String [] args={"-dictionary=dictFilePath","-input=InputFilePath"};
             Config config =ConfigParser.parse(args);
             assertThat(config.getDictionaryFilePath()).isEqualTo("dictFilePath");
             assertThat(config.getInputFilePath()).isEqualTo("InputFilePath");

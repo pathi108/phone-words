@@ -26,14 +26,14 @@ public class ConfigParser {
             }
         }
 
-        inputFilePath = configs.get("input");
-        dictionaryPath = configs.get("dictionary");
+        inputFilePath = configs.get("-input");
+        dictionaryPath = configs.get("-dictionary");
 
-        if (configs.get("dictionary") == null) {
+        if (configs.get("-dictionary") == null) {
             throw new ConfigParserException("The file path to the dictionary not provided ");
         }
 
-        if (configs.get("input") == null) {
+        if (configs.get("-input") == null) {
             throw new ConfigParserException("The file path to the input not provided ");
         }
 
