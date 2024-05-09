@@ -1,0 +1,40 @@
+<assembly>
+    <id>distribution</id>
+    <formats>
+        <format>dir</format>
+        <format>zip</format>
+    </formats>
+
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources/bin</directory>
+            <outputDirectory>/</outputDirectory>
+            <filtered>true</filtered>
+            <includes>
+                <include>start.*</include>
+            </includes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/resources/input</directory>
+            <outputDirectory>input</outputDirectory>
+            <includes>
+                <include>input.txt</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/resources/dictionary</directory>
+            <outputDirectory>dictionary</outputDirectory>
+            <includes>
+                <include>dictionary.txt</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

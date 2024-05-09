@@ -1,0 +1,1 @@
+java -jar lib/phone-words-${project.version}.jar  input/input.csv
